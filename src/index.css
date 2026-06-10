@@ -1,0 +1,98 @@
+@font-face {
+  font-family: 'OkDandan';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2508-2@1.0/OkDanDan-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&family=Gowun+Dodum&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "OkDandan", "Noto Sans KR", "Gowun Dodum", ui-sans-serif, system-ui, sans-serif;
+  --font-kids: "OkDandan", "Gaegu", cursive, sans-serif;
+  --font-fancy: "OkDandan", "Gaegu", cursive, sans-serif;
+
+  --color-hospital-pink: #F9B2D7;
+  --color-hospital-blue: #CFECF3;
+  --color-hospital-green: #DAF9DE;
+  --color-hospital-yellow: #F6FFDC;
+
+  --color-hospital-peach: #F6FFDC;
+  --color-hospital-mint: #CFECF3;
+  --color-hospital-clay: #5A5A40;
+  --color-hospital-coral: #F9B2D7;
+  --color-hospital-yellow: #DAF9DE;
+}
+
+/* Custom styling for warm, organic, cultural vibe */
+body {
+  background-color: #FDFBF7; /* Warm organic background from requested design */
+  color: #333333;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Rounded card and organic box shadows from requested design spec */
+.card-organic {
+  background: white;
+  border-radius: 32px;
+  box-shadow: 0 10px 30px rgba(90, 90, 64, 0.05);
+  border: 4px solid transparent;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-organic:hover {
+  border-color: #F9B2D7; /* hospital-coral active/hover state from design spec */
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(90, 90, 64, 0.08);
+}
+
+.kids-shadow {
+  box-shadow: 0 8px 0px 0px #5A5A40; /* Solid clay button drop-shadow */
+}
+
+.kids-shadow-lg {
+  box-shadow: 0 12px 0px 0px #3A3A20;
+}
+
+.kids-shadow-peach {
+  box-shadow: 0 8px 0px 0px #E5EDB9;
+}
+
+.kids-shadow-coral {
+  box-shadow: 0 8px 0px 0px #D886AF;
+}
+
+.kids-shadow-clay {
+  box-shadow: 0 8px 0px 0px #3F3F2C;
+}
+
+.kids-shadow-mint {
+  box-shadow: 0 8px 0px 0px #B5DCE5;
+}
+
+/* Print simulation for receipts */
+@keyframes print-receipt {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.receipt-animation {
+  animation: print-receipt 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Pulse animation for heartbeat/calling */
+@keyframes cute-heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.cute-pulse {
+  animation: cute-heartbeat 2s infinite ease-in-out;
+}

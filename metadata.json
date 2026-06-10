@@ -1,0 +1,6 @@
+{
+  "name": "마음병원 접수 키오스크",
+  "description": "어린이집, 유치원 등에서 병원/약국 역할놀이를 할 때 아동들이 스스로 병원 접수를 해 볼 수 있는 태블릿/웹 전용 키오스크 어플리케이션입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
